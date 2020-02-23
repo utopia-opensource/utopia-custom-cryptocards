@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace UtopiaAppTemplate
+namespace UtopiaCryptocards
 {
 	/// <summary>
 	/// Description of MainForm.

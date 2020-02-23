@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 # SharpDevelop 5.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtopiaAppTemplate", "UtopiaAppTemplate.csproj", "{2F7E137E-62B3-4F38-815D-0C23B471C6A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtopiaCryptocards", "UtopiaCryptocards.csproj", "{2F7E137E-62B3-4F38-815D-0C23B471C6A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

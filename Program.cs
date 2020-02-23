@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace UtopiaAppTemplate
+namespace UtopiaCryptocards
 {
 	/// <summary>
 	/// Class with program entry point.

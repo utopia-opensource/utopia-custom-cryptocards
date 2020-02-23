@@ -1,4 +1,4 @@
-﻿namespace UtopiaAppTemplate
+﻿namespace UtopiaCryptocards
 {
 	partial class MainForm
 	{

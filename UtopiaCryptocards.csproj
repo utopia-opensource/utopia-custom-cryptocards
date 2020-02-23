@@ -6,8 +6,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UtopiaAppTemplate</RootNamespace>
-    <AssemblyName>UtopiaAppTemplate</AssemblyName>
+    <RootNamespace>UtopiaCryptocards</RootNamespace>
+    <AssemblyName>UtopiaCryptocards</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <TargetFrameworkProfile />
