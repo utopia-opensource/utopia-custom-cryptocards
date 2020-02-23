@@ -30,17 +30,38 @@ namespace UtopiaCryptocards
 			if(!isClientConnected()) { return; }
 			
 			//int image_index = 0;
-			listView1.Items.Clear();
+			listBox1.Items.Clear();
 			
 			JArray cards_arr = client.getCards();
 			for(int i=0; i < cards_arr.Count; i++) {
 				JObject card_info = cards_arr[i] as JObject;
 				string cardID = card_info["cardid"].ToString();
+				listBox1.Items.Add(cardID);
 				
-				ListViewItem new_item = new ListViewItem(cardID);
-				
-				listView1.Items.Add(new_item);
+				if(cards_arr.Count > 0) {
+					listBox1.SelectedIndex = 0;
+					loadCardInfo();
+				}
 			}
+		}
+		
+		void loadCardInfo() {
+			int card_index = listBox1.SelectedIndex;
+			string cardID  = listBox1.Items[card_index].ToString();
+			if(card_index >= 0) {
+				JObject card_info = client.getCardInfo(cardID);
+				
+				cardDataID.Text = cardID;
+				cardDataBalance.Text = card_info["balance"].ToString() + " CRP";
+				cardDataCreated.Text = card_info["created"].ToString();
+				cardDataColor.Text   = card_info["color"].ToString();
+				cardDataName.Text    = card_info["name"].ToString();
+			}
+		}
+		
+		void ListBox1SelectedIndexChanged(object sender, EventArgs e)
+		{
+			loadCardInfo();
 		}
 	}
 }

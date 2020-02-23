@@ -28,9 +28,19 @@
 		private System.Windows.Forms.TextBox textBox_connectionLog;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.TabPage tabPage4;
-		private System.Windows.Forms.ListView listView1;
-		private System.Windows.Forms.ColumnHeader columnHeader1;
-		private System.Windows.Forms.ImageList imageList1;
+		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label cardDataCreated;
+		private System.Windows.Forms.Label cardDataName;
+		private System.Windows.Forms.Label cardDataColor;
+		private System.Windows.Forms.Label cardDataBalance;
+		private System.Windows.Forms.Label cardDataID;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -69,8 +79,19 @@
 			this.textBox_token = new System.Windows.Forms.TextBox();
 			this.textBox_host = new System.Windows.Forms.TextBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.listView1 = new System.Windows.Forms.ListView();
-			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.cardDataCreated = new System.Windows.Forms.Label();
+			this.cardDataName = new System.Windows.Forms.Label();
+			this.cardDataColor = new System.Windows.Forms.Label();
+			this.cardDataBalance = new System.Windows.Forms.Label();
+			this.cardDataID = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.buttonVisitSite = new System.Windows.Forms.Button();
@@ -84,6 +105,7 @@
 			this.groupBox1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.tabPage3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -232,7 +254,19 @@
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.Add(this.listView1);
+			this.tabPage2.Controls.Add(this.label10);
+			this.tabPage2.Controls.Add(this.label9);
+			this.tabPage2.Controls.Add(this.label8);
+			this.tabPage2.Controls.Add(this.label7);
+			this.tabPage2.Controls.Add(this.cardDataCreated);
+			this.tabPage2.Controls.Add(this.cardDataName);
+			this.tabPage2.Controls.Add(this.cardDataColor);
+			this.tabPage2.Controls.Add(this.cardDataBalance);
+			this.tabPage2.Controls.Add(this.cardDataID);
+			this.tabPage2.Controls.Add(this.label6);
+			this.tabPage2.Controls.Add(this.label5);
+			this.tabPage2.Controls.Add(this.pictureBox2);
+			this.tabPage2.Controls.Add(this.listBox1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 29);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -241,20 +275,119 @@
 			this.tabPage2.Text = "My Cards";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// listView1
+			// label10
 			// 
-			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-			this.columnHeader1});
-			this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listView1.Location = new System.Drawing.Point(3, 3);
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(768, 514);
-			this.listView1.TabIndex = 0;
-			this.listView1.UseCompatibleStateImageBehavior = false;
+			this.label10.Location = new System.Drawing.Point(282, 166);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(105, 23);
+			this.label10.TabIndex = 3;
+			this.label10.Text = "Created:";
+			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
-			// columnHeader1
+			// label9
 			// 
-			this.columnHeader1.Width = 128;
+			this.label9.Location = new System.Drawing.Point(282, 143);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(105, 23);
+			this.label9.TabIndex = 3;
+			this.label9.Text = "Name:";
+			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label8
+			// 
+			this.label8.Location = new System.Drawing.Point(282, 120);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(105, 23);
+			this.label8.TabIndex = 3;
+			this.label8.Text = "Color:";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label7
+			// 
+			this.label7.Location = new System.Drawing.Point(282, 97);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(105, 23);
+			this.label7.TabIndex = 3;
+			this.label7.Text = "Balance:";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// cardDataCreated
+			// 
+			this.cardDataCreated.Location = new System.Drawing.Point(393, 166);
+			this.cardDataCreated.Name = "cardDataCreated";
+			this.cardDataCreated.Size = new System.Drawing.Size(361, 23);
+			this.cardDataCreated.TabIndex = 3;
+			this.cardDataCreated.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// cardDataName
+			// 
+			this.cardDataName.Location = new System.Drawing.Point(393, 143);
+			this.cardDataName.Name = "cardDataName";
+			this.cardDataName.Size = new System.Drawing.Size(361, 23);
+			this.cardDataName.TabIndex = 3;
+			this.cardDataName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// cardDataColor
+			// 
+			this.cardDataColor.Location = new System.Drawing.Point(393, 120);
+			this.cardDataColor.Name = "cardDataColor";
+			this.cardDataColor.Size = new System.Drawing.Size(361, 23);
+			this.cardDataColor.TabIndex = 3;
+			this.cardDataColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// cardDataBalance
+			// 
+			this.cardDataBalance.Location = new System.Drawing.Point(393, 97);
+			this.cardDataBalance.Name = "cardDataBalance";
+			this.cardDataBalance.Size = new System.Drawing.Size(361, 23);
+			this.cardDataBalance.TabIndex = 3;
+			this.cardDataBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// cardDataID
+			// 
+			this.cardDataID.Location = new System.Drawing.Point(393, 74);
+			this.cardDataID.Name = "cardDataID";
+			this.cardDataID.Size = new System.Drawing.Size(361, 23);
+			this.cardDataID.TabIndex = 3;
+			this.cardDataID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label6
+			// 
+			this.label6.Location = new System.Drawing.Point(282, 74);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(105, 23);
+			this.label6.TabIndex = 3;
+			this.label6.Text = "ID:";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(261, 20);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(493, 39);
+			this.label5.TabIndex = 2;
+			this.label5.Text = "details";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+			this.pictureBox2.Location = new System.Drawing.Point(91, 20);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(73, 39);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox2.TabIndex = 1;
+			this.pictureBox2.TabStop = false;
+			// 
+			// listBox1
+			// 
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 20;
+			this.listBox1.Location = new System.Drawing.Point(18, 74);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(233, 424);
+			this.listBox1.TabIndex = 0;
+			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.ListBox1SelectedIndexChanged);
 			// 
 			// tabPage4
 			// 
@@ -346,6 +479,7 @@
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.tabPage3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);

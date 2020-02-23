@@ -17,7 +17,7 @@ namespace UtopiaCryptocards
 		{
 			InitializeComponent();
 			
-			//listView1
+			//listView1.SmallImageList = imageList2;
 		}
 		
 		void openURL(string url = "https://example.com") {
