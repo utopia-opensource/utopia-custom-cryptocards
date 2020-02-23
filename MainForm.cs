@@ -11,11 +11,13 @@ namespace UtopiaCryptocards
 	public partial class MainForm : Form
 	{
 		
-		UtopiaLib.Client client;
+		UtopiaLib.Client client = null;
 		
 		public MainForm()
 		{
 			InitializeComponent();
+			
+			//listView1
 		}
 		
 		void openURL(string url = "https://example.com") {
@@ -24,7 +26,7 @@ namespace UtopiaCryptocards
 		
 		void ViewGithubClick(object sender, EventArgs e)
 		{
-			openURL("https://github.com/Sagleft/utopia-csharp-template");
+			openURL("https://github.com/Sagleft/utopia-custom-cryptocards");
 		}
 		
 		void ButtonVisitSiteClick(object sender, EventArgs e)
@@ -50,6 +52,8 @@ namespace UtopiaCryptocards
 				client = new UtopiaLib.Client(api_host, api_port, api_token);
 				if(client.checkClientConnection()) {
 					printToLog("successful connection!");
+					printToLog("loading a list of crypto cards..");
+					updateCardsList();
 				} else {
 					printToLog("failed to connect to client");
 				}

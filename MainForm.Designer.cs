@@ -26,8 +26,11 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button buttonClearLog;
 		private System.Windows.Forms.TextBox textBox_connectionLog;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.TabPage tabPage4;
+		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.ImageList imageList1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -66,7 +69,9 @@
 			this.textBox_token = new System.Windows.Forms.TextBox();
 			this.textBox_host = new System.Windows.Forms.TextBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.label5 = new System.Windows.Forms.Label();
+			this.listView1 = new System.Windows.Forms.ListView();
+			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.buttonVisitSite = new System.Windows.Forms.Button();
 			this.viewGithub = new System.Windows.Forms.Button();
@@ -87,22 +92,24 @@
 			// 
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
+			this.tabControl1.Controls.Add(this.tabPage4);
 			this.tabControl1.Controls.Add(this.tabPage3);
 			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(537, 346);
+			this.tabControl1.Size = new System.Drawing.Size(782, 553);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPage1
 			// 
 			this.tabPage1.Controls.Add(this.groupBox2);
 			this.tabPage1.Controls.Add(this.groupBox1);
-			this.tabPage1.Location = new System.Drawing.Point(4, 25);
+			this.tabPage1.Location = new System.Drawing.Point(4, 29);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(529, 317);
+			this.tabPage1.Size = new System.Drawing.Size(774, 520);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Connection";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,7 +118,7 @@
 			// 
 			this.groupBox2.Controls.Add(this.buttonClearLog);
 			this.groupBox2.Controls.Add(this.textBox_connectionLog);
-			this.groupBox2.Location = new System.Drawing.Point(293, 6);
+			this.groupBox2.Location = new System.Drawing.Point(422, 92);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(228, 303);
 			this.groupBox2.TabIndex = 4;
@@ -138,7 +145,7 @@
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.panel1);
-			this.groupBox1.Location = new System.Drawing.Point(8, 6);
+			this.groupBox1.Location = new System.Drawing.Point(137, 92);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(279, 303);
 			this.groupBox1.TabIndex = 3;
@@ -200,49 +207,63 @@
 			// 
 			this.textBox_port.Location = new System.Drawing.Point(92, 66);
 			this.textBox_port.Name = "textBox_port";
-			this.textBox_port.Size = new System.Drawing.Size(158, 22);
+			this.textBox_port.Size = new System.Drawing.Size(158, 27);
 			this.textBox_port.TabIndex = 10;
-			this.textBox_port.Text = "22824";
+			this.textBox_port.Text = "22324";
 			this.textBox_port.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// textBox_token
 			// 
 			this.textBox_token.Location = new System.Drawing.Point(92, 38);
 			this.textBox_token.Name = "textBox_token";
-			this.textBox_token.Size = new System.Drawing.Size(158, 22);
+			this.textBox_token.Size = new System.Drawing.Size(158, 27);
 			this.textBox_token.TabIndex = 11;
-			this.textBox_token.Text = "1FDECB36C3514BD245CCCF71286ABDEF";
+			this.textBox_token.Text = "080FCE7B7992FC97B0362F059B5D296E";
 			this.textBox_token.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// textBox_host
 			// 
 			this.textBox_host.Location = new System.Drawing.Point(92, 10);
 			this.textBox_host.Name = "textBox_host";
-			this.textBox_host.Size = new System.Drawing.Size(158, 22);
+			this.textBox_host.Size = new System.Drawing.Size(158, 27);
 			this.textBox_host.TabIndex = 12;
 			this.textBox_host.Text = "http://127.0.0.1";
 			this.textBox_host.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.Add(this.label5);
-			this.tabPage2.Location = new System.Drawing.Point(4, 25);
+			this.tabPage2.Controls.Add(this.listView1);
+			this.tabPage2.Location = new System.Drawing.Point(4, 29);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(529, 317);
+			this.tabPage2.Size = new System.Drawing.Size(774, 520);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Section";
+			this.tabPage2.Text = "My Cards";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// label5
+			// listView1
 			// 
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label5.Location = new System.Drawing.Point(23, 99);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(479, 77);
-			this.label5.TabIndex = 0;
-			this.label5.Text = "Your controls may be here.";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+			this.columnHeader1});
+			this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listView1.Location = new System.Drawing.Point(3, 3);
+			this.listView1.Name = "listView1";
+			this.listView1.Size = new System.Drawing.Size(768, 514);
+			this.listView1.TabIndex = 0;
+			this.listView1.UseCompatibleStateImageBehavior = false;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Width = 128;
+			// 
+			// tabPage4
+			// 
+			this.tabPage4.Location = new System.Drawing.Point(4, 29);
+			this.tabPage4.Name = "tabPage4";
+			this.tabPage4.Size = new System.Drawing.Size(774, 520);
+			this.tabPage4.TabIndex = 3;
+			this.tabPage4.Text = "Create card";
+			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
 			// tabPage3
 			// 
@@ -251,9 +272,9 @@
 			this.tabPage3.Controls.Add(this.label4);
 			this.tabPage3.Controls.Add(this.pictureBox1);
 			this.tabPage3.Controls.Add(this.panel2);
-			this.tabPage3.Location = new System.Drawing.Point(4, 25);
+			this.tabPage3.Location = new System.Drawing.Point(4, 29);
 			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Size = new System.Drawing.Size(529, 317);
+			this.tabPage3.Size = new System.Drawing.Size(774, 520);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "About";
 			this.tabPage3.UseVisualStyleBackColor = true;
@@ -280,13 +301,12 @@
 			// 
 			// label4
 			// 
+			this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label4.Location = new System.Drawing.Point(182, 12);
+			this.label4.Location = new System.Drawing.Point(176, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(339, 153);
+			this.label4.Size = new System.Drawing.Size(598, 520);
 			this.label4.TabIndex = 1;
-			this.label4.Text = "C# ready-made MVP application template\r\nfor starting the development of your util" +
-	"ity,\r\nworking with the Utopia Ecosystem API";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// pictureBox1
@@ -306,18 +326,18 @@
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(176, 317);
+			this.panel2.Size = new System.Drawing.Size(176, 520);
 			this.panel2.TabIndex = 3;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(537, 346);
+			this.ClientSize = new System.Drawing.Size(782, 553);
 			this.Controls.Add(this.tabControl1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
-			this.Text = "Utopia App Template";
+			this.Text = "Utopia custom cryptocards";
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.groupBox2.ResumeLayout(false);
