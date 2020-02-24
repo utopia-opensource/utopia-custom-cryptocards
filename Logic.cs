@@ -102,5 +102,10 @@ namespace UtopiaCryptocards
 			updateCardsList();
 			showMessage("OK! cardID: " + result);
 		}
+		
+		void ButtonClearLogClick(object sender, EventArgs e)
+		{
+			textBox_connectionLog.Clear();
+		}
 	}
 }

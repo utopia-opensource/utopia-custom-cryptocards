@@ -182,6 +182,7 @@
 			this.buttonClearLog.TabIndex = 1;
 			this.buttonClearLog.Text = "clear";
 			this.buttonClearLog.UseVisualStyleBackColor = true;
+			this.buttonClearLog.Click += new System.EventHandler(this.ButtonClearLogClick);
 			// 
 			// textBox_connectionLog
 			// 
@@ -622,7 +623,6 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(782, 553);
 			this.Controls.Add(this.tabControl1);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
 			this.Text = "Utopia custom cryptocards";
 			this.tabControl1.ResumeLayout(false);
