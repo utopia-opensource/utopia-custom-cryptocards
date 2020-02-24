@@ -41,6 +41,19 @@
 		private System.Windows.Forms.Label cardDataColor;
 		private System.Windows.Forms.Label cardDataBalance;
 		private System.Windows.Forms.Label cardDataID;
+		private System.Windows.Forms.TextBox newCardName;
+		private System.Windows.Forms.TextBox newCardColor;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Button btnCreateCard;
+		private System.Windows.Forms.TextBox newCardCharacters;
+		private System.Windows.Forms.Button btnChooseColor;
+		private System.Windows.Forms.ColorDialog colorDialog1;
+		private System.Windows.Forms.Button btnColorsGold;
+		private System.Windows.Forms.Button btnColorsBlack;
+		private System.Windows.Forms.Button btnColorsGreen;
+		private System.Windows.Forms.Label label14;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -93,12 +106,25 @@
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.label14 = new System.Windows.Forms.Label();
+			this.btnColorsGreen = new System.Windows.Forms.Button();
+			this.btnColorsBlack = new System.Windows.Forms.Button();
+			this.btnColorsGold = new System.Windows.Forms.Button();
+			this.btnChooseColor = new System.Windows.Forms.Button();
+			this.newCardName = new System.Windows.Forms.TextBox();
+			this.newCardCharacters = new System.Windows.Forms.TextBox();
+			this.newCardColor = new System.Windows.Forms.TextBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.btnCreateCard = new System.Windows.Forms.Button();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.buttonVisitSite = new System.Windows.Forms.Button();
 			this.viewGithub = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -106,6 +132,7 @@
 			this.panel1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			this.tabPage4.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -231,7 +258,7 @@
 			this.textBox_port.Name = "textBox_port";
 			this.textBox_port.Size = new System.Drawing.Size(158, 27);
 			this.textBox_port.TabIndex = 10;
-			this.textBox_port.Text = "22324";
+			this.textBox_port.Text = "22000";
 			this.textBox_port.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// textBox_token
@@ -240,7 +267,6 @@
 			this.textBox_token.Name = "textBox_token";
 			this.textBox_token.Size = new System.Drawing.Size(158, 27);
 			this.textBox_token.TabIndex = 11;
-			this.textBox_token.Text = "080FCE7B7992FC97B0362F059B5D296E";
 			this.textBox_token.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// textBox_host
@@ -391,12 +417,140 @@
 			// 
 			// tabPage4
 			// 
+			this.tabPage4.Controls.Add(this.label14);
+			this.tabPage4.Controls.Add(this.btnColorsGreen);
+			this.tabPage4.Controls.Add(this.btnColorsBlack);
+			this.tabPage4.Controls.Add(this.btnColorsGold);
+			this.tabPage4.Controls.Add(this.btnChooseColor);
+			this.tabPage4.Controls.Add(this.newCardName);
+			this.tabPage4.Controls.Add(this.newCardCharacters);
+			this.tabPage4.Controls.Add(this.newCardColor);
+			this.tabPage4.Controls.Add(this.label11);
+			this.tabPage4.Controls.Add(this.label13);
+			this.tabPage4.Controls.Add(this.label12);
+			this.tabPage4.Controls.Add(this.btnCreateCard);
 			this.tabPage4.Location = new System.Drawing.Point(4, 29);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Size = new System.Drawing.Size(774, 520);
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "Create card";
 			this.tabPage4.UseVisualStyleBackColor = true;
+			// 
+			// label14
+			// 
+			this.label14.Location = new System.Drawing.Point(543, 158);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(81, 30);
+			this.label14.TabIndex = 9;
+			this.label14.Text = "hex";
+			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// btnColorsGreen
+			// 
+			this.btnColorsGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(219)))), ((int)(((byte)(127)))));
+			this.btnColorsGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnColorsGreen.Location = new System.Drawing.Point(644, 125);
+			this.btnColorsGreen.Name = "btnColorsGreen";
+			this.btnColorsGreen.Size = new System.Drawing.Size(27, 27);
+			this.btnColorsGreen.TabIndex = 8;
+			this.btnColorsGreen.UseVisualStyleBackColor = false;
+			this.btnColorsGreen.Click += new System.EventHandler(this.BtnColorsGreenClick);
+			// 
+			// btnColorsBlack
+			// 
+			this.btnColorsBlack.BackColor = System.Drawing.Color.Black;
+			this.btnColorsBlack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnColorsBlack.Location = new System.Drawing.Point(611, 125);
+			this.btnColorsBlack.Name = "btnColorsBlack";
+			this.btnColorsBlack.Size = new System.Drawing.Size(27, 27);
+			this.btnColorsBlack.TabIndex = 8;
+			this.btnColorsBlack.UseVisualStyleBackColor = false;
+			this.btnColorsBlack.Click += new System.EventHandler(this.BtnColorsBlackClick);
+			// 
+			// btnColorsGold
+			// 
+			this.btnColorsGold.BackColor = System.Drawing.Color.Gold;
+			this.btnColorsGold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnColorsGold.Location = new System.Drawing.Point(578, 125);
+			this.btnColorsGold.Name = "btnColorsGold";
+			this.btnColorsGold.Size = new System.Drawing.Size(27, 27);
+			this.btnColorsGold.TabIndex = 8;
+			this.btnColorsGold.UseVisualStyleBackColor = false;
+			this.btnColorsGold.Click += new System.EventHandler(this.BtnColorsGoldClick);
+			// 
+			// btnChooseColor
+			// 
+			this.btnChooseColor.Location = new System.Drawing.Point(543, 125);
+			this.btnChooseColor.Name = "btnChooseColor";
+			this.btnChooseColor.Size = new System.Drawing.Size(29, 27);
+			this.btnChooseColor.TabIndex = 7;
+			this.btnChooseColor.Text = "...";
+			this.btnChooseColor.UseVisualStyleBackColor = true;
+			this.btnChooseColor.Click += new System.EventHandler(this.BtnChooseColorClick);
+			// 
+			// newCardName
+			// 
+			this.newCardName.Location = new System.Drawing.Point(363, 92);
+			this.newCardName.Name = "newCardName";
+			this.newCardName.Size = new System.Drawing.Size(174, 27);
+			this.newCardName.TabIndex = 6;
+			this.newCardName.Text = "my cryptocard";
+			this.newCardName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// newCardCharacters
+			// 
+			this.newCardCharacters.Location = new System.Drawing.Point(363, 158);
+			this.newCardCharacters.MaxLength = 4;
+			this.newCardCharacters.Name = "newCardCharacters";
+			this.newCardCharacters.Size = new System.Drawing.Size(174, 27);
+			this.newCardCharacters.TabIndex = 6;
+			this.newCardCharacters.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// newCardColor
+			// 
+			this.newCardColor.Location = new System.Drawing.Point(363, 125);
+			this.newCardColor.MaxLength = 6;
+			this.newCardColor.Name = "newCardColor";
+			this.newCardColor.Size = new System.Drawing.Size(174, 27);
+			this.newCardColor.TabIndex = 6;
+			this.newCardColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label11
+			// 
+			this.label11.Location = new System.Drawing.Point(184, 165);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(173, 23);
+			this.label11.TabIndex = 4;
+			this.label11.Text = "Custom characters:";
+			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label13
+			// 
+			this.label13.Location = new System.Drawing.Point(184, 92);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(173, 27);
+			this.label13.TabIndex = 5;
+			this.label13.Text = "Card name:";
+			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label12
+			// 
+			this.label12.Location = new System.Drawing.Point(184, 125);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(173, 27);
+			this.label12.TabIndex = 5;
+			this.label12.Text = "Color:";
+			this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// btnCreateCard
+			// 
+			this.btnCreateCard.Location = new System.Drawing.Point(363, 191);
+			this.btnCreateCard.Name = "btnCreateCard";
+			this.btnCreateCard.Size = new System.Drawing.Size(174, 35);
+			this.btnCreateCard.TabIndex = 0;
+			this.btnCreateCard.Text = "create card";
+			this.btnCreateCard.UseVisualStyleBackColor = true;
+			this.btnCreateCard.Click += new System.EventHandler(this.BtnCreateCardClick);
 			// 
 			// tabPage3
 			// 
@@ -480,6 +634,8 @@
 			this.panel1.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			this.tabPage4.ResumeLayout(false);
+			this.tabPage4.PerformLayout();
 			this.tabPage3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
